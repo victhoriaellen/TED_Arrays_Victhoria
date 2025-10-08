@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TED - Arrays em JavaScript</title>
+</head>
+<body>
+  <h1>Trabalho Efetivo Discente - Arrays em JavaScript</h1>
+  <p>Confira os resultados no console (pressione F12 → Console).</p>
+
+  <script>
+   
+    let nomes = ["Ana", "Bruno", "Carlos", "Diana", "Eduardo"];
+    console.log("Array original:", nomes);
+
+    console.log("Terceiro nome:", nomes[2]);
+
+   
+    nomes.pop();
+    console.log("Após remover o último nome:", nomes);
+
+ 
+    nomes.unshift("Fernanda"); 
+    nomes.push("Gustavo"); 
+    console.log("Após adicionar nomes no início e no final:", nomes);
+
+    let numeros = [2, 4, 6, 8];
+    let numerosDobrados = numeros.map(function(valor) {
+      return valor * 2;
+    });
+    console.log("Array original (números):", numeros);
+    console.log("Array com valores dobrados:", numerosDobrados);
+
+   
+    let numeros2 = [1, 3, 5, 7, 9];
+    let maioresQueCinco = numeros2.filter(function(valor) {
+      return valor > 5;
+    });
+    console.log("Array original:", numeros2);
+    console.log("Números maiores que 5:", maioresQueCinco);
+
+   
+    document.write("<h2>Resultados do TED - Arrays</h2>");
+    document.write("<p><strong>Array final de nomes:</strong> " + nomes.join(", ") + "</p>");
+    document.write("<p><strong>Números dobrados:</strong> " + numerosDobrados.join(", ") + "</p>");
+    document.write("<p><strong>Números maiores que 5:</strong> " + maioresQueCinco.join(", ") + "</p>");
+  </script>
+</body>
+</html>
